@@ -1,0 +1,68 @@
+
+\documentclass[fontsize=12pt,a5paper,BCOR=12mm,DIV=calc,twoside]{scrbook}
+\usepackage[scaled=.92]{helvet}
+\KOMAoption{chapterprefix}{false}
+\DeclareSectionCommand[%
+innerskip=0pt,%0.5\baselineskip
+font={\Large},
+prefixfont={\LARGE}
+]{chapter}
+
+\setlength{\parskip}{14pt} %check for a better KOMA option here
+\setlength{\parindent}{1cm}
+%\usepackage[fontsize=12.5pt]{scrextend}
+\usepackage{csquotes}
+\usepackage{epigraph}
+%\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+\input{borrowed_tufte}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+%%
+% Book metadata
+\title{The Communist Manifesto}
+\author{Karl Marx and Friedrich Engels}
+\date{}
+
+
+\begin{document}
+% Front matter
+
+\makeatletter
+\begin{titlepage}
+	% https://github.com/johannesbottcher/titlepageExamples/blob/master/eel.tex
+	\setlength{\parindent}{0pt}
+	\vspace*{.15\textheight}
+	\bigbreak
+	{\Huge \slshape	 \@title \par}
+	\medbreak
+	{\large by \scshape \@author\par}
+	\bigbreak
+	{\small From the English edition of 1888, edited by Friedrich Engels}
+        \vfill
+        {\small The Project Gutenberg eBook of The Communist Manifesto by Karl Marx and Friedrich Engels. Produced by: Allen Lutins and Jim Tarzia.}\par
+        {\tiny \url{https://www.gutenberg.org/cache/epub/61/pg61.txt}}
+\end{titlepage}
+\makeatother
+
+\tableofcontents
+\mainmatter
+
+
+\chapter*{}
+\input{content/chapter0}
+
+\chapter{Bourgeois and Proletarians}
+\input{content/chapter1}
+
+\chapter{Proletarians and Communists}
+\input{content/chapter2}
+
+\chapter{Socialist and Communist Literature}
+\input{content/chapter3}
+
+\chapter[Position of the Communists]{Position of the Communists in Relation to the Various Existing Opposition Parties}
+\input{content/chapter4}
+%
+
+\end{document}
